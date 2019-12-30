@@ -2,61 +2,7 @@ fileFormatVersion: 2
 guid: 292cbae2c8838064aab232b86b20132a
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: //RootNode
-  - first:
-      1: 100002
-    second: DoubleCloset_Door_L
-  - first:
-      1: 100004
-    second: DoubleCloset_Door_R
-  - first:
-      1: 100006
-    second: DoubleCloset_Frame
-  - first:
-      4: 400000
-    second: //RootNode
-  - first:
-      4: 400002
-    second: DoubleCloset_Door_L
-  - first:
-      4: 400004
-    second: DoubleCloset_Door_R
-  - first:
-      4: 400006
-    second: DoubleCloset_Frame
-  - first:
-      21: 2100000
-    second: ClosetMat
-  - first:
-      23: 2300000
-    second: DoubleCloset_Door_L
-  - first:
-      23: 2300002
-    second: DoubleCloset_Door_R
-  - first:
-      23: 2300004
-    second: DoubleCloset_Frame
-  - first:
-      33: 3300000
-    second: DoubleCloset_Door_L
-  - first:
-      33: 3300002
-    second: DoubleCloset_Door_R
-  - first:
-      33: 3300004
-    second: DoubleCloset_Frame
-  - first:
-      43: 4300000
-    second: DoubleCloset_Door_L
-  - first:
-      43: 4300002
-    second: DoubleCloset_Frame
-  - first:
-      43: 4300004
-    second: DoubleCloset_Door_R
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -85,7 +31,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -111,12 +57,12 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 32
+    secondaryUVPackMargin: 16
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 0
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1

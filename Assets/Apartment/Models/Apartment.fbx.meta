@@ -2,136 +2,7 @@ fileFormatVersion: 2
 guid: 9a236a05dd9d44d4aa3a48df8a44a757
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: //RootNode
-  - first:
-      1: 100002
-    second: Bathroom_Floor
-  - first:
-      1: 100004
-    second: Bathroom_Walls
-  - first:
-      1: 100006
-    second: Ceiling
-  - first:
-      1: 100008
-    second: Floor
-  - first:
-      1: 100010
-    second: MainRoom_Walls
-  - first:
-      1: 100012
-    second: Shelves
-  - first:
-      1: 100014
-    second: SkirtingBoard
-  - first:
-      4: 400000
-    second: //RootNode
-  - first:
-      4: 400002
-    second: Bathroom_Floor
-  - first:
-      4: 400004
-    second: Bathroom_Walls
-  - first:
-      4: 400006
-    second: Ceiling
-  - first:
-      4: 400008
-    second: Floor
-  - first:
-      4: 400010
-    second: MainRoom_Walls
-  - first:
-      4: 400012
-    second: Shelves
-  - first:
-      4: 400014
-    second: SkirtingBoard
-  - first:
-      21: 2100000
-    second: BathroomWallMat
-  - first:
-      21: 2100002
-    second: CeilingMat
-  - first:
-      21: 2100004
-    second: FloorMat
-  - first:
-      21: 2100006
-    second: ApartmentDetailsMat
-  - first:
-      21: 2100008
-    second: WallMat
-  - first:
-      21: 2100010
-    second: BathroomFloorMat
-  - first:
-      23: 2300000
-    second: Bathroom_Floor
-  - first:
-      23: 2300002
-    second: Bathroom_Walls
-  - first:
-      23: 2300004
-    second: Ceiling
-  - first:
-      23: 2300006
-    second: Floor
-  - first:
-      23: 2300008
-    second: MainRoom_Walls
-  - first:
-      23: 2300010
-    second: Shelves
-  - first:
-      23: 2300012
-    second: SkirtingBoard
-  - first:
-      33: 3300000
-    second: Bathroom_Floor
-  - first:
-      33: 3300002
-    second: Bathroom_Walls
-  - first:
-      33: 3300004
-    second: Ceiling
-  - first:
-      33: 3300006
-    second: Floor
-  - first:
-      33: 3300008
-    second: MainRoom_Walls
-  - first:
-      33: 3300010
-    second: Shelves
-  - first:
-      33: 3300012
-    second: SkirtingBoard
-  - first:
-      43: 4300000
-    second: Bathroom_Walls
-  - first:
-      43: 4300002
-    second: Ceiling
-  - first:
-      43: 4300004
-    second: Floor
-  - first:
-      43: 4300006
-    second: SkirtingBoard
-  - first:
-      43: 4300008
-    second: MainRoom_Walls
-  - first:
-      43: 4300010
-    second: Bathroom_Floor
-  - first:
-      43: 4300012
-    second: Shelves
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -160,7 +31,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -186,12 +57,12 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 32
+    secondaryUVPackMargin: 16
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 0
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1

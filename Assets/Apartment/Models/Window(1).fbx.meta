@@ -2,46 +2,7 @@ fileFormatVersion: 2
 guid: 1af508ebaaed6ac4c9d702498158c108
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: Glass(1)
-  - first:
-      1: 100002
-    second: //RootNode
-  - first:
-      4: 400000
-    second: Glass(1)
-  - first:
-      4: 400002
-    second: //RootNode
-  - first:
-      21: 2100000
-    second: WindowMat.001
-  - first:
-      21: 2100002
-    second: WindowMat
-  - first:
-      21: 2100004
-    second: TestMaterial.002
-  - first:
-      23: 2300000
-    second: Glass(1)
-  - first:
-      23: 2300002
-    second: //RootNode
-  - first:
-      33: 3300000
-    second: Glass(1)
-  - first:
-      33: 3300002
-    second: //RootNode
-  - first:
-      43: 4300000
-    second: Window(1)
-  - first:
-      43: 4300002
-    second: Glass(1)
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -70,7 +31,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -96,12 +57,12 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 32
+    secondaryUVPackMargin: 16
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 0
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1

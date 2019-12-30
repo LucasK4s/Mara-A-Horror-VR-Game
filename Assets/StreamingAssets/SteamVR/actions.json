@@ -6,7 +6,8 @@
     },
     {
       "name": "/actions/default/in/Teleport",
-      "type": "boolean"
+      "type": "boolean",
+      "requirement": "optional"
     },
     {
       "name": "/actions/default/in/GrabPinch",
