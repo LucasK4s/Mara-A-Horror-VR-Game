@@ -41,7 +41,7 @@ public class VRController : MonoBehaviour
     private void HandleHeight()
     {
         // Get the head in local space
-        float headHeight = Mathf.Clamp(m_Head.localPosition.y, 1, 2);
+        float headHeight = Mathf.Clamp(m_Head.localPosition.y, 0.5f, 1.9f);
         m_CharacterController.height = headHeight;
 
         // Cut in half
