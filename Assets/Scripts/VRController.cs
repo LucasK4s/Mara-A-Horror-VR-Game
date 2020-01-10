@@ -41,7 +41,7 @@ public class VRController : MonoBehaviour
     private void HandleHeight()
     {
         // Get the head in local space
-        float headHeight = Mathf.Clamp(m_Head.localPosition.y, 0.5f, 1.9f);
+        float headHeight = Mathf.Clamp(m_Head.localPosition.y, 0.5f, 1.85f);
         m_CharacterController.height = headHeight;
 
         // Cut in half
@@ -57,7 +57,6 @@ public class VRController : MonoBehaviour
         //Apply
         m_CharacterController.center = newCenter;
     }
-
 
     private void CalculateMovement()
     {
@@ -87,8 +86,6 @@ public class VRController : MonoBehaviour
     {
         float rotation = Mathf.Atan2(m_MoveValue.axis.x, m_MoveValue.axis.y);
         rotation *= Mathf.Rad2Deg;
-        Debug.Log(rotation);
-
 
         Vector3 orientationEuler = new Vector3(0, m_Head.eulerAngles.y + rotation, 0);
 
@@ -108,5 +105,5 @@ public class VRController : MonoBehaviour
         transform.RotateAround(m_Head.position, Vector3.up, snapValue);
 
     }
-
+  
 }

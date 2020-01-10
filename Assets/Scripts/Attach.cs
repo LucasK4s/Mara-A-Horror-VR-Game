@@ -23,7 +23,7 @@ public class Attach : MonoBehaviour
     {
     }
 
-    private void OnHandHoverUpdate(Hand hand)
+    private void HandHoverUpdate(Hand hand)
     {
         GrabTypes grabType = hand.GetGrabStarting();
         bool isGrabEnding = hand.IsGrabEnding(gameObject);
