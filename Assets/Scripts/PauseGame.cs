@@ -5,31 +5,28 @@ using Valve.VR;
 
 public class PauseGame : MonoBehaviour
 {
-    public bool gamePaused = false;
     public GameObject pauseMenu;
     public SteamVR_Action_Boolean pauseAction;
     public SteamVR_Input_Sources handType;
 
     private bool CheckPauseButton()
     {
-        return pauseAction.GetState(handType);
+        return pauseAction.GetStateDown(handType);
     }
 
     void Update ()
     {
         if (CheckPauseButton())
         {
-            if (gamePaused == false)
+            if (Time.timeScale == 1)
             {
-                Time.timeScale = 0;
-                gamePaused = true;
                 pauseMenu.SetActive(true);
+                Time.timeScale = 0;
             }
             else
             {
-                pauseMenu.SetActive(false);
-                gamePaused = false;
                 Time.timeScale = 1;
+                pauseMenu.SetActive(false); 
             }
         }
     }

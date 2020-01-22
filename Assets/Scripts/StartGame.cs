@@ -8,6 +8,7 @@ public class StartGame : MonoBehaviour
 {
     public SteamVR_Input_Sources handType;
     public SteamVR_Action_Boolean grabAction;
+    public Animator animator;
 
     private bool CheckGrab()
     {
@@ -25,7 +26,12 @@ public class StartGame : MonoBehaviour
     {
         if (CheckGrab())
         {
-            SceneManager.LoadScene("Apartment");
+            animator.SetTrigger("FadeScene");
         }
+    }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene("Apartment");
     }
 }
