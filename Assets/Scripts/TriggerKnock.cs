@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerKnock: MonoBehaviour
-{
-    public bool AlreadyPlayed = false;
-
+{ 
     void OnTriggerExit(Collider target)
     {
-        if (target.gameObject.tag.Equals("Player") == true && AlreadyPlayed == false)
+        if (target.gameObject.tag.Equals("Player") == true && Manager.Instance.firstTrigger == false)
         {
             GetComponent<AudioSource>().Play();
-            AlreadyPlayed = true;
+            Manager.Instance.firstTrigger = true;
         }
     }
 }

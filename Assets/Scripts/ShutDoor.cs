@@ -4,35 +4,38 @@ using UnityEngine;
 
 public class ShutDoor : MonoBehaviour
 {
-    private bool triggered = false;
     public GameObject ldoor;
     public GameObject rdoor;
     public float speed;
+    private bool geschlossen = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (triggered == false)
-        {
-            if (other.gameObject.tag == "Player")
+        if (Manager.Instance.secondTrigger == true && Manager.Instance.thirdTrigger == false && other.gameObject.tag == "Player")
+        {     
+            if (gameObject.GetComponentInParent<AudioSource>().isPlaying)
             {
-                if (gameObject.GetComponentInParent<AudioSource>().isPlaying)
-                {
-                    gameObject.GetComponentInParent<AudioSource>().Stop();
-                    triggered = true;
-                    gameObject.GetComponentInChildren<AudioSource>().Play();
-                }
+                gameObject.GetComponentInParent<AudioSource>().Stop();
+                Manager.Instance.thirdTrigger = true;
+                gameObject.GetComponentInChildren<AudioSource>().Play();
             }
         }
     }
 
     void Update()
     {
-        if (triggered == true)
+        if (Manager.Instance.thirdTrigger == true)
         {
             var step = speed * Time.deltaTime;
-
-            ldoor.transform.rotation = Quaternion.RotateTowards(ldoor.transform.rotation, Quaternion.Euler(0, 0, 0), step);
-            rdoor.transform.rotation = Quaternion.RotateTowards(rdoor.transform.rotation, Quaternion.Euler(0, 0, 0), step);
+            if (geschlossen == false)
+            {
+                ldoor.transform.rotation = Quaternion.RotateTowards(ldoor.transform.rotation, Quaternion.Euler(0, 0, 0), step);
+                rdoor.transform.rotation = Quaternion.RotateTowards(rdoor.transform.rotation, Quaternion.Euler(0, 0, 0), step);
+                if (ldoor.transform.rotation == Quaternion.Euler(0,0,0))
+                {
+                    geschlossen = true;
+                }
+            }
         }
     }
 }
