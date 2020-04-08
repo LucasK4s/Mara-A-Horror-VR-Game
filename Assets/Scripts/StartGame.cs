@@ -24,7 +24,7 @@ public class StartGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CheckGrab())
+        if (CheckGrab() || transform.position.y < -4)
         {
             animator.SetTrigger("FadeScene");
         }
