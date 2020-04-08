@@ -26,6 +26,7 @@ public class StartGame : MonoBehaviour
     {
         if (CheckGrab() || transform.position.y < -4)
         {
+            GetComponent<AudioSource>().Play();
             animator.SetTrigger("FadeScene");
         }
     }
