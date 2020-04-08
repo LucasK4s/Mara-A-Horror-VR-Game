@@ -4,12 +4,18 @@ using System.Collections;
 public class PhoneRings : MonoBehaviour
 {
     Material mat;
+    bool hasPlayed= false;
     void Update()
     {   if(Manager.Instance.thirdTrigger == true && Manager.Instance.fourthTrigger == false)
         {
             Manager.Instance.fourthTrigger = true;
             //Start the coroutine we define below named ExampleCoroutine.
             StartCoroutine(ExampleCoroutine());
+        }
+        if(hasPlayed == true && !GetComponent<AudioSource>().isPlaying)
+        {
+            mat = GetComponent<Renderer>().materials[1];
+            mat.DisableKeyword("_EMISSION");
         }
     }
 
@@ -20,5 +26,6 @@ public class PhoneRings : MonoBehaviour
         mat = GetComponent<Renderer>().materials[1];
         mat.EnableKeyword("_EMISSION");
         GetComponent<AudioSource>().Play();
+        hasPlayed = true;
     }
 }
