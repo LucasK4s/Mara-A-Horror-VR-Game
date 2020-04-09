@@ -25,7 +25,7 @@ public class Clock : MonoBehaviour {
     float msecs;
     GameObject pointerSeconds;
     GameObject pointerMinutes;
-    GameObject pointerHours;
+    public GameObject pointerHours;
 //-----------------------------------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------------------------------
@@ -75,6 +75,7 @@ public class Clock : MonoBehaviour {
                 seconds++;
                 if (seconds >= 60)
                 {
+                    GetComponent<AudioSource>().Play();
                     seconds = 0;
                     minutes++;
                     if (minutes > 60)

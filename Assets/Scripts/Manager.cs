@@ -12,6 +12,11 @@ public class Manager : MonoBehaviour
     public bool fourthTrigger;
     public bool fithTrigger;
     public bool sixthTrigger;
+    public bool seventhTrigger;
+    public bool eighthTrigger;
+    public bool ninthTrigger;
+    public bool tenthTrigger;
+
 
     private void Awake()
     {
