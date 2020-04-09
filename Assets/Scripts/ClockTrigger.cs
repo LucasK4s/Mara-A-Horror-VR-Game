@@ -14,7 +14,7 @@ public class ClockTrigger : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Manager.Instance.fourthTrigger == true)
+        if (Manager.Instance.fithTrigger == true)
         {
             if (sc.minutes != 30)
             {

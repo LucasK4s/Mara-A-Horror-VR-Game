@@ -14,6 +14,7 @@ public class PhoneRings : MonoBehaviour
         }
         if(hasPlayed == true && !GetComponent<AudioSource>().isPlaying)
         {
+            Manager.Instance.fithTrigger = true;
             mat = GetComponent<Renderer>().materials[1];
             mat.DisableKeyword("_EMISSION");
         }
