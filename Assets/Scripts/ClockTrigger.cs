@@ -5,7 +5,6 @@ using UnityEngine;
 public class ClockTrigger : MonoBehaviour
 {
     private Clock sc;
-    bool triggered = false;
     // Start is called before the first frame update
     void Start()
     {

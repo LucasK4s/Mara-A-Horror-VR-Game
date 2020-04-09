@@ -12,7 +12,7 @@ public class ShutDoor : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (Manager.Instance.secondTrigger == true && Manager.Instance.thirdTrigger == false && other.gameObject.tag == "Player")
-        {     
+        {
             if (gameObject.GetComponentInParent<AudioSource>().isPlaying)
             {
                 gameObject.GetComponentInParent<AudioSource>().Stop();
@@ -31,12 +31,13 @@ public class ShutDoor : MonoBehaviour
             {
                 ldoor.transform.rotation = Quaternion.RotateTowards(ldoor.transform.rotation, Quaternion.Euler(0, 0, 0), step);
                 rdoor.transform.rotation = Quaternion.RotateTowards(rdoor.transform.rotation, Quaternion.Euler(0, 0, 0), step);
-                if (ldoor.transform.rotation == Quaternion.Euler(0,0,0))
+                if (ldoor.transform.rotation == Quaternion.Euler(0, 0, 0))
                 {
                     geschlossen = true;
                 }
             }
         }
     }
+
 }
 
