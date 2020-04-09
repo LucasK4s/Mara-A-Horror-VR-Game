@@ -5,10 +5,12 @@ using UnityEngine;
 public class ClockTrigger : MonoBehaviour
 {
     private Clock sc;
+    bool triggered = false;
     // Start is called before the first frame update
     void Start()
     {
         sc = gameObject.GetComponent<Clock>();
+
     }
 
     // Update is called once per frame
@@ -16,21 +18,18 @@ public class ClockTrigger : MonoBehaviour
     {
         if (Manager.Instance.fithTrigger == true)
         {
-            if (sc.minutes != 30)
-            {
-                StartCoroutine(ExampleCoroutine());
-            }
+
+            if (sc.seconds ==35  ) GetComponent<AudioSource>().Play();
+            if (sc.negative == false) sc.negative = true;
+            sc.hour = 6;
             float rotationHours = ((360.0f / 12.0f) * sc.hour);
             sc.pointerHours.transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationHours);
+            float rotationSeconds = (360.0f / 60.0f) * sc.seconds;
+            sc.pointerMinutes.transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationSeconds);
         }
+        
     }
+    
 
-    IEnumerator ExampleCoroutine()
-    {
-        //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(0.1f);
-        sc.minutes = 30;
-        sc.hour = 6;
-
-    }
+    
 }

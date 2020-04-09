@@ -21,10 +21,10 @@ public class Clock : MonoBehaviour {
     public float clockSpeed = 1.0f;     // 1.0f = realtime, < 1.0f = slower, > 1.0f = faster
 
     //-- internal vars
-    int seconds;
+    public int seconds;
     float msecs;
-    GameObject pointerSeconds;
-    GameObject pointerMinutes;
+    public GameObject pointerSeconds;
+    public GameObject pointerMinutes;
     public GameObject pointerHours;
 //-----------------------------------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------------------------------
