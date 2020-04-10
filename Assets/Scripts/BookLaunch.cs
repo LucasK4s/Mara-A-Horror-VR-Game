@@ -92,7 +92,12 @@ public class BookLaunch : MonoBehaviour
         book5.GetComponent<Rigidbody>().useGravity = true;
         GameObject.Find("seiten5").GetComponent<AudioSource>().Play();
         book5.GetComponent<Rigidbody>().AddForce(Vector3.right * force5);
-        Manager.Instance.eighthTrigger = true;
+        StartCoroutine(Coro6());
+    }
 
+    IEnumerator Coro6()
+    {
+        yield return new WaitForSeconds(8);
+        Manager.Instance.eighthTrigger = true;
     }
 }

@@ -27,14 +27,14 @@ public class PortraitTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (Manager.Instance.ninthTrigger == true && Manager.Instance.tenthTrigger == false)
+        if (Manager.Instance.eighthTrigger == true && Manager.Instance.ninthTrigger == false)
         {
             rigb.isKinematic = false;
             rigb.useGravity = true;
 
             rigb.AddForce(sign * Vector3.left * force);
 
-            Manager.Instance.tenthTrigger = true;
+            Manager.Instance.ninthTrigger = true;
             glasSplinters.SetActive(true);
 
         }
