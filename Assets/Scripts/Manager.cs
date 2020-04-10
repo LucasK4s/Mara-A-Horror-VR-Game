@@ -24,6 +24,20 @@ public class Manager : MonoBehaviour
     public bool sixteenthTrigger;
     public bool seventeenthTrigger;
 
+    public bool NoteOne;
+    public bool NoteTwo;
+    public bool NoteThree;
+    public bool NoteFour;
+    public bool NoteFive;
+    public bool NoteSix;
+    public bool NoteSeven;
+    public bool NoteEight;
+    public bool NoteNine;
+    public bool NoteTen;
+    public bool NoteEleven;
+    public bool NoteTwelve;
+    public bool NoteThirteen;
+
 
 
     private void Awake()
