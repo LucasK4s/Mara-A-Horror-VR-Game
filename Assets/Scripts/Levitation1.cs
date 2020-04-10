@@ -19,11 +19,11 @@ public class Levitation1 : MonoBehaviour
         rigb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Manager.Instance.tenthTrigger == true && Manager.Instance.eleventhTrigger == false)
         {
-            Manager.Instance.eleventhTrigger = true;
+           
 
             rigb.AddForce(Vector3.up * force * multiplicator);
             rigb.useGravity = false;
@@ -43,7 +43,7 @@ public class Levitation1 : MonoBehaviour
             {
                 rigb.AddForce(Vector3.back * force);
             }
-
+            Manager.Instance.eleventhTrigger = true;
         }
 
         if (Manager.Instance.tenthTrigger == true && leviTime >= 0f)

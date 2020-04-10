@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Levitation4 : MonoBehaviour
+public class Levitation5 : MonoBehaviour
 {
     Rigidbody rigb;
     public bool right = false;
@@ -36,12 +36,12 @@ public class Levitation4 : MonoBehaviour
             //enabled = false;
         }
     }
-
+    // Update is called once per frame
     private void OnCollisionEnter(Collision collision)
     {
         if (!GetComponent<AudioSource>().isPlaying && collision.relativeVelocity.magnitude >= 1)
         {
-            GetComponent<AudioSource>().volume = collision.relativeVelocity.magnitude / 10;
+            GetComponent<AudioSource>().volume = collision.relativeVelocity.magnitude / 5;
             GetComponent<AudioSource>().Play();
         }
     }
@@ -49,10 +49,10 @@ public class Levitation4 : MonoBehaviour
     IEnumerator coro()
     {
 
-        yield return new WaitForSeconds(0.1f);
-        rigb.isKinematic = false;
+        yield return new WaitForSeconds(0.6f);
+
         rigb.AddForce(Vector3.up * force * multiplicator);
-        rigb.AddTorque( new Vector3(1,1,0) * 10.0f);
+        rigb.AddTorque(new Vector3(1, 0, 1) * 10.0f);
         rigb.useGravity = false;
         if (right == true)
         {

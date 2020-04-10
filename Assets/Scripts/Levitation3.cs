@@ -19,7 +19,7 @@ public class Levitation3 : MonoBehaviour
         rigb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Manager.Instance.tenthTrigger == true && Manager.Instance.eleventhTrigger == false)
         {
