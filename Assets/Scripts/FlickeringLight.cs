@@ -26,7 +26,11 @@ public class FlickeringLight : MonoBehaviour
 
     void Update()
     {
-        light.color = originalColor * (EvalWave());
+        if(Manager.Instance.eleventhTrigger == true && Manager.Instance.twelthTrigger == false)
+        {
+            light.color = originalColor * (EvalWave());
+
+        }
     }
 
     float EvalWave()

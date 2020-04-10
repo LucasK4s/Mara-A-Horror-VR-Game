@@ -630,11 +630,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a092b06b0c9dab42a27d2404ac12d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveform: 5
+  waveform: 0
   baseStart: 0
   amplitude: 1
   phase: 0
-  frequency: 0.1
+  frequency: 6
 --- !u!1 &110539515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,11 +1311,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a092b06b0c9dab42a27d2404ac12d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveform: 5
+  waveform: 2
   baseStart: 0
   amplitude: 1
   phase: 0
-  frequency: 0.1
+  frequency: 6
 --- !u!1 &191476422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,11 +1983,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a092b06b0c9dab42a27d2404ac12d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveform: 5
+  waveform: 0
   baseStart: 0
   amplitude: 1
   phase: 0
-  frequency: 0.1
+  frequency: 6
 --- !u!1001 &230158274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6471,11 +6471,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a092b06b0c9dab42a27d2404ac12d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveform: 5
+  waveform: 2
   baseStart: 0
   amplitude: 1
   phase: 0
-  frequency: 0.1
+  frequency: 6
 --- !u!1 &875418990
 GameObject:
   m_ObjectHideFlags: 0
@@ -11498,11 +11498,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a092b06b0c9dab42a27d2404ac12d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveform: 5
+  waveform: 0
   baseStart: 0
   amplitude: 1
   phase: 0
-  frequency: 0.1
+  frequency: 6
 --- !u!1 &1397987102
 GameObject:
   m_ObjectHideFlags: 0
@@ -13512,11 +13512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a092b06b0c9dab42a27d2404ac12d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveform: 5
+  waveform: 0
   baseStart: 0
   amplitude: 1
   phase: 0
-  frequency: 0.1
+  frequency: 6
 --- !u!1001 &1668245775
 PrefabInstance:
   m_ObjectHideFlags: 0
