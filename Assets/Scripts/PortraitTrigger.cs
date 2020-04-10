@@ -42,8 +42,8 @@ public class PortraitTrigger : MonoBehaviour
 
             Manager.Instance.ninthTrigger = true;
             glasSplinters.SetActive(true);
-            audio2.Play();
-
+            audio1.Play();
+            StartCoroutine(ExampleCoroutine());
         }
     }
 
@@ -53,8 +53,8 @@ public class PortraitTrigger : MonoBehaviour
         
             if (!audio2.isPlaying && collision.relativeVelocity.magnitude >= 1 && secondCol== true)
             {
-                GetComponent<AudioSource>().volume = collision.relativeVelocity.magnitude / 10;
-                GetComponent<AudioSource>().Play();
+                audio2.volume = collision.relativeVelocity.magnitude / 10;
+                audio2.Play();
             }
         secondCol = true;
         

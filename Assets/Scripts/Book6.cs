@@ -14,9 +14,10 @@ public class Book6 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Manager.Instance.NoteSeven == true && GetComponent<Interactable>().enabled == false)
+        if (Manager.Instance.sixthTrigger == true && GetComponent<BoxCollider>().enabled == false)
         {
-            GetComponent<Interactable>().enabled = true;
+            GetComponent<BoxCollider>().enabled = true;
+            GetComponent<Rigidbody>().useGravity = true;
         }
     }
 }

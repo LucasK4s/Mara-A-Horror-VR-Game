@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NoteFive : MonoBehaviour
 {
+    bool trig = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,8 +14,9 @@ public class NoteFive : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if(Manager.Instance.fourthTrigger == true )
+        if(Manager.Instance.fourthTrigger == true && trig == false)
         {
+            trig = true;
             gameObject.GetComponent<MeshRenderer>().enabled = true;
         }
     }

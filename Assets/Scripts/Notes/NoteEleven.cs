@@ -5,6 +5,7 @@ using Valve.VR.InteractionSystem;
 
 public class NoteEleven : MonoBehaviour
 {
+    bool trig = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,11 @@ public class NoteEleven : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Manager.Instance.sixthTrigger == true && gameObject.GetComponent<MeshRenderer>().enabled == false )
+        if (Manager.Instance.NoteSeven == true && gameObject.GetComponent<MeshRenderer>().enabled == false && trig == false)
         {
             gameObject.GetComponent<MeshRenderer>().enabled = true;
-            GetComponent<Interactable>().enabled = true;
+            GetComponent<BoxCollider>().enabled = true;
+            GetComponent<Rigidbody>().useGravity = true;
         }
     }
 
@@ -28,6 +30,7 @@ public class NoteEleven : MonoBehaviour
 
     public void PutAway()
     {
+        trig = true;
         GameObject.Find("AS11").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteEleven = true;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
