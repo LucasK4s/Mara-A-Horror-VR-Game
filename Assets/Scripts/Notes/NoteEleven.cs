@@ -30,6 +30,6 @@ public class NoteEleven : MonoBehaviour
     {
         GameObject.Find("AS11").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteEleven = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

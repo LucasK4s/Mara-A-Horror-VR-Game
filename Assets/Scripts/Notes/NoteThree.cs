@@ -25,6 +25,6 @@ public class NoteThree : MonoBehaviour
     {
         GameObject.Find("AS3").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteThree = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

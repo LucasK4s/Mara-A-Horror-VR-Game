@@ -32,6 +32,6 @@ public class NoteNine : MonoBehaviour
     {
         GameObject.Find("AS9").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteNine = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

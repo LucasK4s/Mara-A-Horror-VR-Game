@@ -28,6 +28,6 @@ public class NoteFive : MonoBehaviour
     {
         GameObject.Find("AS5").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteFive = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

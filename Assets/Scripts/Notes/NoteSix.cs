@@ -28,6 +28,6 @@ public class NoteSix : MonoBehaviour
     {
         GameObject.Find("AS6").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteSix = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

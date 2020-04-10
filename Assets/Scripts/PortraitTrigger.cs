@@ -8,13 +8,18 @@ public class PortraitTrigger : MonoBehaviour
     public GameObject disturbedPortrait;
     public GameObject glasSplinters;
     public GameObject note12;
-
+    AudioSource audio1;
+    AudioSource audio2;
     public float force = 50f;
     public bool forceNegative = false;
     private float sign = 1;
+    bool secondCol = false;
     
     void Start()
     {
+        AudioSource[] audios = GetComponents<AudioSource>();
+        audio1 = audios[0];
+        audio2 = audios[1];
         rigb = GetComponent<Rigidbody>();
         if (forceNegative == true)
         {
@@ -37,17 +42,22 @@ public class PortraitTrigger : MonoBehaviour
 
             Manager.Instance.ninthTrigger = true;
             glasSplinters.SetActive(true);
+            audio2.Play();
 
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Floor_Collider")
-        {
-            GetComponent<AudioSource>().Play();
-            StartCoroutine(ExampleCoroutine());
-        }
+        
+        
+            if (!audio2.isPlaying && collision.relativeVelocity.magnitude >= 1 && secondCol== true)
+            {
+                GetComponent<AudioSource>().volume = collision.relativeVelocity.magnitude / 10;
+                GetComponent<AudioSource>().Play();
+            }
+        secondCol = true;
+        
     }
 
     IEnumerator ExampleCoroutine()

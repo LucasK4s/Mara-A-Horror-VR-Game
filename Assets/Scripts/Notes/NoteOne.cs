@@ -25,6 +25,6 @@ public class NoteOne : MonoBehaviour
     {
         GameObject.Find("AS1").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteOne = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

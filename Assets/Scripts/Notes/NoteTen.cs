@@ -32,6 +32,6 @@ public class NoteTen : MonoBehaviour
     {
         GameObject.Find("AS10").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteTen = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

@@ -28,6 +28,6 @@ public class NoteFour : MonoBehaviour
     {
         GameObject.Find("AS4").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteFour = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

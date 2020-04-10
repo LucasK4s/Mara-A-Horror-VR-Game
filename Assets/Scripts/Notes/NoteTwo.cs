@@ -25,6 +25,6 @@ public class NoteTwo : MonoBehaviour
     {
         GameObject.Find("AS2").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteTwo = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

@@ -32,6 +32,6 @@ public class NoteEight : MonoBehaviour
     {
         GameObject.Find("AS8").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteEight = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

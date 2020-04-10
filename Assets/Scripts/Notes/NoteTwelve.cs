@@ -28,6 +28,6 @@ public class NoteTwelve : MonoBehaviour
     {
         GameObject.Find("AS12").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteTwelve = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

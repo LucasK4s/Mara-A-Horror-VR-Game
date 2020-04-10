@@ -25,6 +25,6 @@ public class NoteThirteen : MonoBehaviour
     {
         GameObject.Find("AS13").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteThirteen = true;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }
