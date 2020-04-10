@@ -9,7 +9,7 @@ public class Levitation4 : MonoBehaviour
     public bool left = false;
     public bool forward = true;
     public bool back = false;
-
+    bool triggered = false;
     public float multiplicator = 1.0f;
     public float force = 100;
     public float leviTime = 10f;
@@ -21,8 +21,9 @@ public class Levitation4 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Manager.Instance.tenthTrigger == true && Manager.Instance.eleventhTrigger == false)
+        if (Manager.Instance.tenthTrigger == true && triggered == false)
         {
+            triggered = true;
             StartCoroutine(coro());
         }
 

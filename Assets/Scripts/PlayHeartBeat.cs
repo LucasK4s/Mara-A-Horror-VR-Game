@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.EventSystems;
 using UnityEngine;
 
 public class PlayHeartBeat : MonoBehaviour
 {
-
+    bool triggered = false;
     bool decrease = false;
     // Start is called before the first frame update
     void Start()
@@ -15,8 +16,9 @@ public class PlayHeartBeat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Manager.Instance.thirdTrigger == true && Manager.Instance.fourthTrigger == false && !GetComponent<AudioSource>().isPlaying)
+        if (Manager.Instance.thirdTrigger == true && triggered == false && !GetComponent<AudioSource>().isPlaying)
         {
+            triggered = true;
             GameObject.Find("Ambient1").GetComponent<AudioSource>().Stop();
             GetComponent<AudioSource>().Play();
             StartCoroutine(coro());

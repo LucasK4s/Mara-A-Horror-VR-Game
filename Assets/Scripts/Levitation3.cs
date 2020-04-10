@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.EventSystems;
 using UnityEngine;
 
 public class Levitation3 : MonoBehaviour
@@ -9,7 +10,7 @@ public class Levitation3 : MonoBehaviour
     public bool left = false;
     public bool forward = true;
     public bool back = false;
-
+    bool triggered = false;
     public float multiplicator = 1.0f;
     public float force = 100;
     public float leviTime = 10f;
@@ -21,8 +22,9 @@ public class Levitation3 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Manager.Instance.tenthTrigger == true && Manager.Instance.eleventhTrigger == false)
+        if (Manager.Instance.eleventhTrigger == true && triggered == false)
         {
+            triggered = true;
             StartCoroutine(coro());
         }
 

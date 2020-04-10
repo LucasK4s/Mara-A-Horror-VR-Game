@@ -12042,7 +12042,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1565375618
+--- !u!114 &1565375617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12051,7 +12051,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1565375614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9802f9601422adb4181bf8b1d9bec32c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9843c092500a0a94491c67628ad3b01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   right: 0
@@ -12059,7 +12059,7 @@ MonoBehaviour:
   forward: 0
   back: 1
   multiplicator: 0.5
-  force: 250
+  force: 200
   leviTime: 10
 --- !u!54 &1565375619
 Rigidbody:
@@ -12076,7 +12076,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 3
+  m_CollisionDetection: 1
 --- !u!4 &1576329897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7892160263763709283, guid: 3ffe41d48e7a781408f33dea71cd85a9,
