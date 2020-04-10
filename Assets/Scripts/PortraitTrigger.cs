@@ -7,6 +7,7 @@ public class PortraitTrigger : MonoBehaviour
     Rigidbody rigb;
     public GameObject disturbedPortrait;
     public GameObject glasSplinters;
+    public GameObject note12;
 
     public float force = 50f;
     public bool forceNegative = false;
@@ -53,7 +54,7 @@ public class PortraitTrigger : MonoBehaviour
     {
 
         yield return new WaitForSeconds(1.2f);
-        
+        note12.SetActive(true);
         gameObject.SetActive(false);
         disturbedPortrait.transform.position = this.transform.position;
         disturbedPortrait.transform.rotation = this.transform.rotation;
