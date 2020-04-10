@@ -13,7 +13,10 @@ public class NoteSix : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(!GetComponent<Renderer>().isVisible && gameObject.transform.localScale == Vector3.zero)
+        {
+            gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); 
+        }
     }
 
     public void PickUp()

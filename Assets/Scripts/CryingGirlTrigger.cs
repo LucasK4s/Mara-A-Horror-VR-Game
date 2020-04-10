@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaySound : MonoBehaviour
+public class CryingGirlTrigger : MonoBehaviour
 {
     public GameObject ldoor;
     public GameObject rdoor;

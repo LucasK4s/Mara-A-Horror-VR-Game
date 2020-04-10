@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PhoneRings : MonoBehaviour
 {
+    public GameObject note6;
     Material mat;
     bool hasPlayed= false;
     void Update()
@@ -17,6 +18,7 @@ public class PhoneRings : MonoBehaviour
             Manager.Instance.fithTrigger = true;
             mat = GetComponent<Renderer>().materials[1];
             mat.DisableKeyword("_EMISSION");
+            note6.SetActive(true);
         }
     }
 

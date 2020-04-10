@@ -11,9 +11,12 @@ public class NoteFive : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        
+        if(Manager.Instance.fourthTrigger == true )
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
+        }
     }
 
     public void PickUp()

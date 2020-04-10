@@ -13,7 +13,10 @@ public class NoteFour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Manager.Instance.secondTrigger == true && !gameObject.GetComponent<Renderer>().isVisible )
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void PickUp()

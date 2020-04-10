@@ -14,7 +14,7 @@ public class StopRinging : MonoBehaviour
     IEnumerator ExampleCoroutine()
     {
         //yield on a new YieldInstruction that waits for 3 seconds.
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         GetComponent<AudioSource>().Stop();
         mat = GetComponent<Renderer>().materials[1];
         mat.DisableKeyword("_EMISSION");

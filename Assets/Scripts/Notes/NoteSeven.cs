@@ -13,12 +13,16 @@ public class NoteSeven : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Manager.Instance.fithTrigger == true && Manager.Instance.sixthTrigger == false)
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
+        }
     }
 
     public void PickUp()
     {
         GetComponent<AudioSource>().Play();
+        Manager.Instance.sixthTrigger = true;
     }
 
     public void PutAway()
