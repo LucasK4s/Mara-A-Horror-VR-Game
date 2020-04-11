@@ -15,7 +15,7 @@ public class NoteTwelve : MonoBehaviour
     {
         if (!GetComponent<Renderer>().isVisible)
         {
-            gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }
 

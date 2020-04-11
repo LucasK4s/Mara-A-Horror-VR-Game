@@ -15,7 +15,7 @@ public class NoteSix : MonoBehaviour
     {
         if(!GetComponent<Renderer>().isVisible && gameObject.transform.localScale == Vector3.zero)
         {
-            gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); 
+            gameObject.transform.localScale = new Vector3(1f, 1f, 1f); 
         }
     }
 
