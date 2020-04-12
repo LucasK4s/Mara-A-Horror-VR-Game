@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NoteThree : MonoBehaviour
 {
+    public GameObject sub;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,8 @@ public class NoteThree : MonoBehaviour
     public void PickUp()
     {
         GetComponent<AudioSource>().Play();
+        sub.GetComponent<Subtitles>().ThirdNote();
+
     }
 
     public void PutAway()

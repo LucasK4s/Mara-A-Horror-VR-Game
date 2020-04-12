@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NoteFive : MonoBehaviour
 {
+    public GameObject sub;
     bool trig = false;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class NoteFive : MonoBehaviour
     public void PickUp()
     {
         GetComponent<AudioSource>().Play();
+        sub.GetComponent<Subtitles>().FithNote();
     }
 
     public void PutAway()

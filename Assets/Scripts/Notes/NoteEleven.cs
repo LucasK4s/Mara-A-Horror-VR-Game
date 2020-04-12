@@ -5,6 +5,7 @@ using Valve.VR.InteractionSystem;
 
 public class NoteEleven : MonoBehaviour
 {
+    public GameObject sub;
     bool trig = false;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class NoteEleven : MonoBehaviour
     public void PickUp()
     {
         GetComponent<AudioSource>().Play();
+        sub.GetComponent<Subtitles>().EleventhNote();
     }
 
     public void PutAway()
