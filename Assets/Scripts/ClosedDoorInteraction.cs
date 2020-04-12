@@ -1,20 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 using Valve.VR;
 
-public class ClosedDoorInteraction : MonoBehaviour
+public class ClosedDoorInteraction : Valve.VR.InteractionSystem.Interactable
 {
+
     public SteamVR_Input_Sources handType;
     public SteamVR_Action_Boolean grabAction;
-    // Start is called before the first frame update
 
-
-    private void OnTriggerStay(Collider other)
+    protected override void Update ()
     {
-        if (other.tag.Equals("Player") && grabAction.GetState(handType) && !GetComponent<AudioSource>().isPlaying)
+        if (highlightOnHover)
         {
-            GetComponent<AudioSource>().Play();
+            UpdateHighlightRenderers();
+
+            if (isHovering == false && highlightHolder != null)
+                Destroy(highlightHolder);
+            
+            if(isHovering == true && grabAction.GetState(handType) && !GetComponent<AudioSource>().isPlaying)
+            {
+                GetComponent<AudioSource>().Play();
+            }
         }
     }
 }
+
