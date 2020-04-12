@@ -21,16 +21,16 @@ public class Subtitles : MonoBehaviour
 
     IEnumerator Sub()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         gameObject.GetComponent<Text>().text = "After a long night of researching about a fantasy creature called \"Mare\", you fell asleep on your desk. \n As you wake up, you realize something feels odd..";
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(10);
         gameObject.GetComponent<Text>().text = "";
 
     }
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         gameObject.GetComponent<Text>().text = "";
     }
 
