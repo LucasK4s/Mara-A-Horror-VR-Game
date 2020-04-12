@@ -21,13 +21,13 @@ public class Levitation4 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Manager.Instance.tenthTrigger == true && triggered == false)
+        if (Manager.Instance.twelthTrigger == true && triggered == false)
         {
             triggered = true;
             StartCoroutine(coro());
         }
 
-        if (Manager.Instance.tenthTrigger == true && leviTime >= 0f)
+        if (Manager.Instance.eleventhTrigger == true && leviTime >= 0f)
         {
             leviTime -= Time.deltaTime;
         }

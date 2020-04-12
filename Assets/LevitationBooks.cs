@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.EventSystems;
 using UnityEngine;
 
-public class Levitation2 : MonoBehaviour
+public class LevitationBooks : MonoBehaviour
 {
     Rigidbody rigb;
     public bool right = false;

@@ -71,5 +71,4 @@ public class PortraitTrigger : MonoBehaviour
         disturbedPortrait.SetActive(true);
 
     }
-
 }

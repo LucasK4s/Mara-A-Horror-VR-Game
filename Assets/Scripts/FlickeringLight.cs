@@ -8,6 +8,8 @@ public class FlickeringLight : MonoBehaviour
     public enum WaveForm { sin, tri, sqr, saw, inv, noise };
     public WaveForm waveform = WaveForm.sin;
 
+    bool trig = false;
+    public float howlong = 10.0f;
     public float baseStart = 0.0f; // start
     public float amplitude = 1.0f; // amplitude of the wave
     public float phase = 0.0f; // start point inside on wave cycle
@@ -26,10 +28,16 @@ public class FlickeringLight : MonoBehaviour
 
     void Update()
     {
-        if(Manager.Instance.eleventhTrigger == true && Manager.Instance.twelthTrigger == false)
+        if(Manager.Instance.eleventhTrigger == true )
         {
             light.color = originalColor * (EvalWave());
+            
+        }
 
+        if(Manager.Instance.eleventhTrigger == true && trig  == false)
+        {
+            StartCoroutine(Duration());
+            trig = true;
         }
     }
 
@@ -80,5 +88,11 @@ public class FlickeringLight : MonoBehaviour
             y = 1.0f;
         }
         return (y * amplitude) + baseStart;
+    }
+
+    IEnumerator Duration()
+    {
+        yield return new WaitForSeconds(howlong);
+        GetComponent<Light>().intensity = 0;
     }
 }

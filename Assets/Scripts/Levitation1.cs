@@ -21,7 +21,7 @@ public class Levitation1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Manager.Instance.tenthTrigger == true && Manager.Instance.eleventhTrigger == false)
+        if (Manager.Instance.eleventhTrigger == true && Manager.Instance.twelthTrigger == false)
         {
            
 
@@ -43,10 +43,10 @@ public class Levitation1 : MonoBehaviour
             {
                 rigb.AddForce(Vector3.back * force);
             }
-            Manager.Instance.eleventhTrigger = true;
+            Manager.Instance.twelthTrigger = true;
         }
 
-        if (Manager.Instance.tenthTrigger == true && leviTime >= 0f)
+        if (Manager.Instance.eleventhTrigger == true && leviTime >= 0f)
         {
             leviTime -= Time.deltaTime;
         }
