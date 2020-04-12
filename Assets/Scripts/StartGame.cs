@@ -22,7 +22,7 @@ public class StartGame : MonoBehaviour
     {   
         if (isFading == false)
         {
-            if (CheckGrab() || transform.position.y < -4)
+            if (CheckGrab() || transform.position.y < -2)
             {
                 isFading = true;
                 GetComponent<AudioSource>().Play(); 
