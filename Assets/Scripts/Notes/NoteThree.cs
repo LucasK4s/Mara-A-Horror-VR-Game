@@ -26,5 +26,6 @@ public class NoteThree : MonoBehaviour
         GameObject.Find("AS3").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteThree = true;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 }

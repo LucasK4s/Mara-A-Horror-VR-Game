@@ -13,7 +13,7 @@ public class PlayWhisperAmbient : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Manager.Instance.playWhisper == true && GetComponent<AudioSource>().isPlaying == false)
+        if(Manager.Instance.playWhisper == true && GetComponent<AudioSource>().isPlaying == false && Manager.Instance.lightsOut == false)
         {
             GetComponent<AudioSource>().Play();
         }

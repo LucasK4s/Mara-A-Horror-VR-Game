@@ -15,7 +15,7 @@ public class ClockTrigger : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Manager.Instance.sixthTrigger == true)
+        if (Manager.Instance.sixthTrigger == true && Manager.Instance.lightsOut == false)
         {
 
             if (sc.seconds ==35  ) GetComponent<AudioSource>().Play();

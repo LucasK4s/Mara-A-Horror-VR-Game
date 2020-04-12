@@ -94,5 +94,6 @@ public class FlickeringLight : MonoBehaviour
     {
         yield return new WaitForSeconds(howlong);
         GetComponent<Light>().intensity = 0;
+        Manager.Instance.lightsOut = true;
     }
 }

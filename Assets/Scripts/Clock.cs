@@ -73,7 +73,7 @@ public class Clock : MonoBehaviour {
             {
                 msecs -= 1.0f;
                 seconds++;
-                if (seconds >= 60)
+                if (seconds >= 60 && Manager.Instance.lightsOut == false)
                 {
                     GetComponent<AudioSource>().Play();
                     seconds = 0;
