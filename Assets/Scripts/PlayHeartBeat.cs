@@ -24,7 +24,7 @@ public class PlayHeartBeat : MonoBehaviour
             StartCoroutine(coro());
         }
 
-        if (decrease == true && GetComponent<AudioSource>().volume > 0.085)
+        if (decrease == true && GetComponent<AudioSource>().volume > 0.12)
         {
             GetComponent<AudioSource>().volume += -0.005f;
         }

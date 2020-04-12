@@ -33,6 +33,7 @@ public class NoteEleven : MonoBehaviour
         trig = true;
         GameObject.Find("AS11").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteEleven = true;
+        Manager.Instance.playWhisper = true;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

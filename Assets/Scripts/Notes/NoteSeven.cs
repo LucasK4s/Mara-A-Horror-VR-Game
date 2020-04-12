@@ -29,6 +29,7 @@ public class NoteSeven : MonoBehaviour
     {
         GameObject.Find("AS7").GetComponent<AudioSource>().Play();
         Manager.Instance.NoteSeven = true;
+        Manager.Instance.playSuspense = true;
         gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

@@ -37,6 +37,8 @@ public class Manager : MonoBehaviour
     public bool NoteEleven;
     public bool NoteTwelve;
     public bool NoteThirteen;
+    public bool playWhisper;
+    public bool playSuspense;
 
 
 
