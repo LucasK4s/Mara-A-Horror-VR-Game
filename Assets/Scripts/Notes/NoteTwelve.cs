@@ -23,7 +23,7 @@ public class NoteTwelve : MonoBehaviour
     public void PickUp()
     {
         GetComponent<AudioSource>().Play();
-        sub.GetComponent<Subtitles>().ThirdNote();
+        sub.GetComponent<Subtitles>().TwelthNote();
     }
 
     public void PutAway()

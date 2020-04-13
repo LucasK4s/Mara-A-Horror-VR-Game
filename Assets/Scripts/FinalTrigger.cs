@@ -18,7 +18,7 @@ public class FinalTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Manager.Instance.tenthTrigger == true && Manager.Instance.eleventhTrigger == false)
+        if (Manager.Instance.tenthTrigger == true && Manager.Instance.eleventhTrigger == false && other.gameObject.tag == "Player")
         {
             Manager.Instance.eleventhTrigger = true;
             GameObject.Find("HeartBeat").GetComponent<AudioSource>().Stop();

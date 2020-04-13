@@ -5,6 +5,8 @@ using UnityEngine;
 public class DisturberdPortraitPickUp : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public GameObject writings;
     void Start()
     {
         
@@ -23,6 +25,7 @@ public class DisturberdPortraitPickUp : MonoBehaviour
 
     IEnumerator Coro()
     {
+        writings.SetActive(true);
         yield return new WaitForSeconds(5);
         Manager.Instance.tenthTrigger = true;
     }

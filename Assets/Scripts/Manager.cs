@@ -40,6 +40,7 @@ public class Manager : MonoBehaviour
     public bool playWhisper;
     public bool playSuspense;
     public bool lightsOut;
+    public bool cryinggirl;
 
 
 

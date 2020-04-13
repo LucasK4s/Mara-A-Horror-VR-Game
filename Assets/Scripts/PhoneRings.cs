@@ -25,7 +25,7 @@ public class PhoneRings : MonoBehaviour
     IEnumerator ExampleCoroutine()
     {
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(180);
         GameObject.Find("PianoImpactOnPhoneTrigger").GetComponent<AudioSource>().Play();
 
         StartCoroutine(Coro());

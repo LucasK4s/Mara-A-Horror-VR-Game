@@ -22,6 +22,7 @@ public class ClosedDoorInteraction : Valve.VR.InteractionSystem.Interactable
             if(isHovering == true && grabAction.GetState(handType) && !GetComponent<AudioSource>().isPlaying)
             {
                 GetComponent<AudioSource>().Play();
+                Manager.Instance.cryinggirl = true;
             }
         }
     }
