@@ -38,7 +38,7 @@ public class BookLaunch : MonoBehaviour
 
     IEnumerator Coro1()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         book1.GetComponent<Rigidbody>().isKinematic = false;
         book1.GetComponent<Rigidbody>().useGravity = true;
         GameObject.Find("seiten1").GetComponent<AudioSource>().Play();

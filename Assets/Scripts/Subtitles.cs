@@ -30,13 +30,13 @@ public class Subtitles : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(6);
         gameObject.GetComponent<Text>().text = "";
     }
 
     public void FirstNote()
     {
-        gameObject.GetComponent<Text>().text = "\"DEEP SLEEP\" \n It's in your handwriting but you don't remember writing that note..?";
+        gameObject.GetComponent<Text>().text = "\"DEEP SLEEP\" \n It's in your handwriting but you don't remember writing that note..? Anyway I will keep that for later.";
         StartCoroutine(Wait());
     }
 
