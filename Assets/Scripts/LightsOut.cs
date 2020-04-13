@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class LightsOut : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class LightsOut : MonoBehaviour
     public GameObject tableLamp;
     public GameObject laptop;
     public GameObject canvas;
+    public GameObject logo;
     public GameObject[] lights;
     bool trig;
     public GameObject[] audiosources;
@@ -58,7 +61,9 @@ public class LightsOut : MonoBehaviour
     IEnumerator Coro2()
     {
         yield return new WaitForSeconds(3);
-
+        logo.SetActive(true);
         gameObject.GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(10);
+        SceneManager.LoadScene("Main Menu");
     }
 }
